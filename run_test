@@ -1,9 +1,0 @@
-make && make clean
-echo "*********************************"
-echo ""
-echo ""
-#echo -n "[" && gcc main.c libftprintf.a && ./a.out  $1  && echo -n "]"
-gcc -fsanitize=address main.c libftprintf.a && ./a.out && valgrind ./a.out $1 $2 && rm a.out
-echo ""
-echo "\n"
-echo "*********************************"

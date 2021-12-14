@@ -17,8 +17,8 @@ all: $(NAME)
 
 $(NAME): $(LIBFT_NAME) $(OBJS)
 	@cp libft/libft.a ./$(NAME)
-	@ar rc $(NAME) $(OBJS) $(LIBFT_PATH)$(LIBFT_NAME)
-	@ranlib $(NAME)
+	ar rc $(NAME) $(OBJS) $(LIBFT_PATH)$(LIBFT_NAME)
+	ranlib $(NAME)
 
 $(LIBFT_NAME):
 	@cd $(LIBFT_PATH) && $(MAKE) bonus && cd ..
